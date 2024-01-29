@@ -59,8 +59,25 @@ console.log(window.sessionStorage);
 //   form.reset();
 // });
 
+// const form = document.querySelector(".feedback-form");
+// const localStorageKey = "message";
+
+// form.addEventListener("input", (evt) => {
+//     localStorage.setItem(localStorageKey, evt.target.value);
+// });
+
+// form.addEventListener("submit", (evt) => {
+//     evt.preventDefault();
+//     evt.target.elements.message.value;
+//     localStorage.removeItem(localStorageKey);
+//     form.reset();
+// });
+
 const form = document.querySelector(".feedback-form");
-const localStorageKey = "goit-example-message";
+const textarea = form.elements.message;
+const localStorageKey = "message";
+
+textarea.value = localStorage.getItem(localStorageKey) ?? "";
 
 form.addEventListener("input", (evt) => {
     localStorage.setItem(localStorageKey, evt.target.value);
@@ -68,7 +85,7 @@ form.addEventListener("input", (evt) => {
 
 form.addEventListener("submit", (evt) => {
     evt.preventDefault();
-    //   console.log(evt.target.elements.message.value);
+    console.log(evt.target.elements.message.value);
     localStorage.removeItem(localStorageKey);
     form.reset();
 });
