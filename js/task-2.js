@@ -91,7 +91,8 @@
 // });
 
 
-const guestName = "Mango";
-const roomNumber = 207;
-const greeting = `Welcome ${guestName}, your room number is ${roomNumber}!`;
-console.log(greeting); 
+const date = new Date("March 16, 2030 14:25:00");
+console.log("Date: ", date); // "Sat Mar 16 2030 14:25:00 GMT+0200"
+
+date.setMinutes(50);
+console.log(date); 
