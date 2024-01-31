@@ -47,7 +47,7 @@
 // localStorage.removeItem("book");
 // console.log(parseBook);
 
-console.log(window.sessionStorage);
+// console.log(window.sessionStorage);
 
 
 
@@ -73,19 +73,25 @@ console.log(window.sessionStorage);
 //     form.reset();
 // });
 
-const form = document.querySelector(".feedback-form");
-const textarea = form.elements.message;
-const localStorageKey = "message";
+// const form = document.querySelector(".feedback-form");
+// const textarea = form.elements.message;
+// const localStorageKey = "message";
 
-textarea.value = localStorage.getItem(localStorageKey) ?? "";
+// textarea.value = localStorage.getItem(localStorageKey) ?? "";
 
-form.addEventListener("input", (evt) => {
-    localStorage.setItem(localStorageKey, evt.target.value);
-});
+// form.addEventListener("input", (evt) => {
+//     localStorage.setItem(localStorageKey, evt.target.value);
+// });
 
-form.addEventListener("submit", (evt) => {
-    evt.preventDefault();
-    console.log(evt.target.elements.message.value);
-    localStorage.removeItem(localStorageKey);
-    form.reset();
-});
+// form.addEventListener("submit", (evt) => {
+//     evt.preventDefault();
+//     console.log(evt.target.elements.message.value);
+//     localStorage.removeItem(localStorageKey);
+//     form.reset();
+// });
+
+
+const guestName = "Mango";
+const roomNumber = 207;
+const greeting = `Welcome ${guestName}, your room number is ${roomNumber}!`;
+console.log(greeting); 
