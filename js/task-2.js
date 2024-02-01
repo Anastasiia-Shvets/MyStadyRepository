@@ -89,10 +89,7 @@
 //     localStorage.removeItem(localStorageKey);
 //     form.reset();
 // });
-
-
-const date = new Date("March 16, 2030 14:25:00");
-console.log("Date: ", date); // "Sat Mar 16 2030 14:25:00 GMT+0200"
-
-date.setMinutes(50);
-console.log(date); 
+const date = new Date('2024');
+console.log(date.getTime());
+const init = Date.now();
+console.log(init);
