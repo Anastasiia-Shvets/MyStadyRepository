@@ -1,131 +1,35 @@
 `use strict`;
-// const savedTheme = localStorage.getItem("ui-theme");
-// console.log(savedTheme); // "light"
-
-// const settings = {
-//   theme: "dark",
-//   isAuthenticated: true,
-//   options: [1, 2, 3],
-// };
-// localStorage.setItem("settings", JSON.stringify(settings));
-
-// const savedSettings = localStorage.getItem("settings");
-// console.log(savedSettings); // A string
-
-// const parseSettings = JSON.parse("savedSettings");
-// console.log(parseSettings);
-
-// const settings = {
-//   theme: "dark",
-//   isAuthenticated: true,
-//   options: [1, 2, 3],
-// };
-// localStorage.setItem("settings", JSON.stringify(settings));
-
-// const savedSettings = localStorage.getItem("settings");
-// console.log(savedSettings); // A string
-
-// const parsedSettings = JSON.parse(savedSettings);
-// console.log(parsedSettings); // Settings object
-
-// const book = {
-//     nameBook: "The moon",
-//     author: "Tom Higint",
-//     rating: 8.45
-// }
-// console.log(book);
-
-// localStorage.setItem("book", JSON.stringify(book));
-
-// const getBook = localStorage.getItem("book");
-// console.log(getBook);
-
-// const parseBook = JSON.parse(getBook);
-// console.log(parseBook);
-
-// localStorage.removeItem("book");
-// console.log(parseBook);
-
-// console.log(window.sessionStorage);
-
-// const form = document.querySelector(".feedback-form");
-
-// form.addEventListener("submit", (evt) => {
-//   evt.preventDefault();
-//   console.log(evt.target.elements.message.value);
-//   form.reset();
-// });
-
-// const form = document.querySelector(".feedback-form");
-// const localStorageKey = "message";
-
-// form.addEventListener("input", (evt) => {
-//     localStorage.setItem(localStorageKey, evt.target.value);
-// });
-
-// form.addEventListener("submit", (evt) => {
-//     evt.preventDefault();
-//     evt.target.elements.message.value;
-//     localStorage.removeItem(localStorageKey);
-//     form.reset();
-// });
-
-// const form = document.querySelector(".feedback-form");
-// const textarea = form.elements.message;
-// const localStorageKey = "message";
-
-// textarea.value = localStorage.getItem(localStorageKey) ?? "";
-
-// form.addEventListener("input", (evt) => {
-//     localStorage.setItem(localStorageKey, evt.target.value);
-// });
-
-// form.addEventListener("submit", (evt) => {
-//     evt.preventDefault();
-//     console.log(evt.target.elements.message.value);
-//     localStorage.removeItem(localStorageKey);
-//     form.reset();
-// });
-// const date = new Date('2024');
-// console.log(date.getTime());
-// const init = Date.now();
-// console.log(init);
+function makeTransaction(quantity, pricePerDroid) {
+    const totalPrice = quantity * pricePerDroid;
+    return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
+}
 
 
 
+console.log(makeTransaction(5, 3000)); // "You ordered 5 droids worth 15000 credits!"
+console.log(makeTransaction(3, 1000)); // "You ordered 3 droids worth 3000 credits!"
+console.log(makeTransaction(10, 500)); // "You ordered 10 droids worth 5000 credits!"
 
-const options = {
-    method: "GET",
-};
 
-fetch("<https://jsonplaceholder.typicode.com/users>", options)
-    .then((response) => {
-        if (!response.ok) {
-            throw new Error(response.status);
-        }
-        return response.json();
-    })
-    .then((data) => {
-        // Data handling
-    })
-    .catch((error) => {
-        // Error handling
-    });
-console.log(options);
 
-fetch("some-url", {
-    headers: {
-        "Content-Type": "application/json",
-        "X-Custom-Header": "custom value",
-    }
-})
+function getShippingMessage(country, price, deliveryFee) {
+    const totalPrice = price + deliveryFee;
+    return `Shipping to ${country} will cost ${totalPrice} credits`;
+}
 
-const searchParams = new URLSearchParams({
-    _limit: 5,
-    _sort: "name",
-});
+console.log(getShippingMessage("Australia", 120, 50)); // "Shipping to Australia will cost 170 credits"
+console.log(getShippingMessage("Germany", 80, 20)); // "Shipping to Germany will cost 100 credits"
+console.log(getShippingMessage("Sweden", 100, 20)); // "Shipping to Sweden will cost 120 credits"
 
-console.log(searchParams.toString()); // "_limit=5&_sort=name"
-const url = `https://jsonplaceholder.typicode.com/users?${searchParams}`;
-console.log(url); // "<https://jsonplaceholder.typicode.com/users?_limit=5&_sort=name>"
 
+function getElementWidth(content, padding, border) {
+    const contentWidth = parseFloat(content);
+    const paddingWidth = parseFloat(padding);
+    const borderWidth = parseFloat(border);
+    const total = contentWidth + 2 * (paddingWidth + borderWidth);
+    return total;
+}
+
+console.log(getElementWidth("50px", "8px", "4px")); // 74
+console.log(getElementWidth("60px", "12px", "8.5px")); // 101
+console.log(getElementWidth("200px", "0px", "0px")); // 200
