@@ -1,0 +1,170 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+body {
+    display: block;
+    margin: 8px;
+    background-color: #FFF
+}
+
+.conteiner {
+    margin: auto;
+    max-width: 1440px;
+    height: 848px;
+}
+
+h1 {
+    color: #2E2F42;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.3em;
+    letter-spacing: 0.4px;
+}
+
+h2 {
+    color: #2E2F42;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5em;
+    letter-spacing: 0.04px;
+}
+
+h3 {
+    color: #FFF;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5em;
+    letter-spacing: 0.04px;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+#datetime-picker {
+    border-radius: 4px;
+    width: 272px;
+    height: 40px;
+    margin: 30px 0;
+}
+
+button[data-start] {
+    border-radius: 8px;
+    padding: 8px 16px;
+    width: 75px;
+    height: 40px;
+    background: #4e75ff;
+    color: #FFF
+}
+
+button[data-start]:hover {
+    background: #6c8cff;
+}
+
+.timer {
+    width: 346px;
+    height: 72px;
+    display: flex;
+    gap: 24px;
+}
+
+.field {
+    width: 82px;
+    height: 72px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.value {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    color: #2e2f42
+}
+
+.label {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #2e2f42;
+}
+
+.form {
+    width: 360px;
+    height: 264px;
+}
+
+.form input[type="number"] {
+    width: 360px;
+    height: 40px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.form label {
+    width: 360px;
+    height: 78px;
+}
+
+.form input[type="radio"] {
+    border: 1px solid #757575;
+    border-radius: 14px;
+    width: 20px;
+    height: 20px;
+}
+
+.form button[type="submit"] {
+    border-radius: 8px;
+    padding: 8px 16px;
+    width: 360px;
+    height: 40px;
+    background: #4e75ff;
+    color: #FFF;
+    margin-top: 25px;
+}
+
+.form button[type="submit"]:hover {
+    background: #6c8cff;
+}
+
+.form fieldset legend {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #2e2f42;
+}
