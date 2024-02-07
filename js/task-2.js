@@ -1,7 +1,6 @@
-`use strict`
+`use strict`;
 // const savedTheme = localStorage.getItem("ui-theme");
 // console.log(savedTheme); // "light"
-
 
 // const settings = {
 //   theme: "dark",
@@ -49,8 +48,6 @@
 
 // console.log(window.sessionStorage);
 
-
-
 // const form = document.querySelector(".feedback-form");
 
 // form.addEventListener("submit", (evt) => {
@@ -89,7 +86,46 @@
 //     localStorage.removeItem(localStorageKey);
 //     form.reset();
 // });
-const date = new Date('2024');
-console.log(date.getTime());
-const init = Date.now();
-console.log(init);
+// const date = new Date('2024');
+// console.log(date.getTime());
+// const init = Date.now();
+// console.log(init);
+
+
+
+
+const options = {
+    method: "GET",
+};
+
+fetch("<https://jsonplaceholder.typicode.com/users>", options)
+    .then((response) => {
+        if (!response.ok) {
+            throw new Error(response.status);
+        }
+        return response.json();
+    })
+    .then((data) => {
+        // Data handling
+    })
+    .catch((error) => {
+        // Error handling
+    });
+console.log(options);
+
+fetch("some-url", {
+    headers: {
+        "Content-Type": "application/json",
+        "X-Custom-Header": "custom value",
+    }
+})
+
+const searchParams = new URLSearchParams({
+    _limit: 5,
+    _sort: "name",
+});
+
+console.log(searchParams.toString()); // "_limit=5&_sort=name"
+const url = `https://jsonplaceholder.typicode.com/users?${searchParams}`;
+console.log(url); // "<https://jsonplaceholder.typicode.com/users?_limit=5&_sort=name>"
+
