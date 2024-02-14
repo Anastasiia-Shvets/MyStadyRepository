@@ -34,6 +34,25 @@
 // console.log(getElementWidth("60px", "12px", "8.5px")); // 101
 // console.log(getElementWidth("200px", "0px", "0px")); // 200
 
-const url = 'https://jsonplaceholder.typicode.com/todos/1';
-    fetch(url);
-    
+// let count = 0;
+
+// while (count < 10) {
+//   console.log(`Count: ${count}`);
+//   count += 1;
+// }
+// let clientCounter = 18;
+// const maxClients = 25;
+
+// while (clientCounter < maxClients) {
+//   console.log(clientCounter);
+//   clientCounter += 1;
+// }
+for (let i = 0; i <= 20; i += 5) {
+  console.log(i);
+}
+for (let i = 20; i >= 0; i -= 5) {
+  console.log(i);
+}
+
+
+
